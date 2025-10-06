@@ -1,11 +1,10 @@
 import "./Window.css"
-import Spotify from "./Spotify/Spotify.jsx"
 import React, { useState, useRef } from "react";
 import { assets } from "../../assets/assets.js";
 import Chrome from "./Chrome/Chrome.jsx";
 import Portfolio from "./Portfolio/Portfolio.jsx";
 
-function FileExplorer({ icon, title, onClose, isMinimized, setIsMinimized, volume}) {
+function Window({ icon, title, onClose, isMinimized, setIsMinimized, volume, url}) {
 
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [size, setSize] = useState({ width: 1280, height: 720 });
@@ -114,7 +113,7 @@ function FileExplorer({ icon, title, onClose, isMinimized, setIsMinimized, volum
             <div className="headbar" onMouseDown={onMouseDown}>
                 <div className="title">
                     <div className="windowIcon">
-                        <img src={icon} alt="Icon" />
+                        <img src={icon} alt="Icon" className="windowIconImg" onClick={()=>{window.open(url, '_blank', 'noopener,noreferrer')}}/>
                     </div>
                     <span>{title}</span>
                 </div>
@@ -132,9 +131,7 @@ function FileExplorer({ icon, title, onClose, isMinimized, setIsMinimized, volum
             </div>
 
             <div className="content">
-                {title === "Spotify" ? (<Spotify volume={volume} style={{ height: "100%", width: "100%" }} windowWidth={width} />) : (<div />)}
-                {title === "Chrome" ? (<Chrome/>) : (<div />)}
-                {title === "Portfolio" ? (<Portfolio style={{ height: "100%", width: "100%" }} />) : (<div />)}
+                <iframe src={url} width="100%" height="100%" title="Web View" frameBorder="0" />
             </div>
 
             <div className="resize-handle" onMouseDown={onMouseDownResize} />
@@ -143,4 +140,4 @@ function FileExplorer({ icon, title, onClose, isMinimized, setIsMinimized, volum
     );
 }
 
-export default FileExplorer
+export default Window

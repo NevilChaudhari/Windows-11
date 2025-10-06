@@ -60,10 +60,11 @@
     display: flex;
 }
 
-.windowIcon img{
+.windowIconImg{
     width: 25px;
     height: auto;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .windowControll{

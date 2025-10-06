@@ -1,7 +1,7 @@
 import "./Desktop.css"
 import React, { useState } from 'react';
 import { assets } from "../../assets/assets.js";
-import FileExplorer from "../Softwares/Window.jsx";
+import Window from "../Softwares/Window.jsx";
 import StartMenu from "../Softwares/StartMenu/startMenu.jsx";
 import OptionsMenu from "../Softwares/OptionsMenu/OptionsMenu.jsx";
 import DesktopIcon from "../Widget/DesktopIcon.jsx";
@@ -152,23 +152,23 @@ function Desktop() {
                     </div>
                 </div>
                 {openWindows.FileExplorer && (
-                    <FileExplorer icon={assets.fileExplorerIcon} title="FileExplorer" onClose={() => deactivate("FileExplorer")} isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
+                    <Window icon={assets.fileExplorerIcon} title="FileExplorer" onClose={() => deactivate("FileExplorer")} isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
                 )}
 
                 {openWindows.Chrome && (
-                    <FileExplorer icon={assets.chromeIcon} title="Chrome" onClose={() => deactivate("Chrome")} isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
+                    <Window icon={assets.chromeIcon} title="Chrome" onClose={() => deactivate("Chrome")} isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
                 )}
 
                 {openWindows.Spotify && (
-                    <FileExplorer icon={assets.spotifyIcon} title="Spotify" onClose={() => deactivate("Spotify")} isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
+                    <Window icon={assets.spotifyIcon} title="Spotify" onClose={() => deactivate("Spotify")} isMinimized={isMinimized} setIsMinimized={setIsMinimized} url={"https://spotifyclonebynevil.netlify.app/"}/>
                 )}
 
                 {openWindows.Settings && (
-                    <FileExplorer icon={assets.settingsIcon} title="Settings" onClose={() => deactivate("Settings")} isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
+                    <Window icon={assets.settingsIcon} title="Settings" onClose={() => deactivate("Settings")} isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
                 )}
 
                 {openWindows.Portfolio && (
-                    <FileExplorer icon={assets.user} title="Portfolio" onClose={() => deactivate("Portfolio")} isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
+                    <Window icon={assets.user} title="Portfolio" onClose={() => deactivate("Portfolio")} isMinimized={isMinimized} setIsMinimized={setIsMinimized} url={"https://nevilchaudhari.github.io/portfolio/"}/>
                 )}
 
                 {openWindows.Windows && (
