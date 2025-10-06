@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.window{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    top: 200px;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(25, 25, 25);
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.minimize{
+    display: none;
+}
+
+.resize-handle{
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 0;
+  bottom: 0;
+  cursor: nwse-resize;
+  /* optionally add visible styling */
+  border-right: 2px solid rgb(128, 128, 128);
+  border-bottom: 2px solid rgb(128, 128, 128);
+  background: transparent;
+}
+
+.headbar{
+    flex: 0 0 40px;  /* Fixed height */
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background-color: #333;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.title{
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.windowControllBar{
+    right: 0;
+    position: relative;
+    display: flex;
+}
+
+.windowIcon img{
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.windowControll{
+    width: 50px;
+    height: 40px;
+    border-top-right-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.windowControll img{
+    width: 15px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.close:hover{
+    background-color: red;
+}
+
+.maximize:hover {
+    background-color: gray;
+    border-radius: 0;
+}
+
+.minimize:hover {
+    background-color: gray;
+    border-radius: 0;
+}
+
+.content{
+    flex: 1 1 auto;  /* Fill remaining space */
+    overflow: auto;
+    height: auto;
+    overflow: hidden;
+}

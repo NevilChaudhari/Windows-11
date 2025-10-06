@@ -1,0 +1,28 @@
+.desktopIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.selectedDesktopIcon{
+  background-color: rgba(170, 170, 170, 0.2);
+}
+
+.desktopIcon:hover{
+  background-color: rgba(170, 170, 170, 0.2);
+}
+
+.desktopIcon-image {
+  width: 40px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.desktopIcon-name {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}

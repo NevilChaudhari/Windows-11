@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    user-select: none;
+}
+
+.Desktop {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../assets/wallpaper.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.desktopicons{
+    display: grid;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    align-items: start;
+    justify-content: start;
+    margin: 10px;
+}
+
+.Taskbar {
+    width: 100%;
+    max-height: 35px;
+    position: absolute;
+    background-color: rgba(36, 36, 36, 0.9);
+    bottom: 0;
+    border-top: 0.5px solid rgba(128, 128, 128, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 7px 0px;
+}
+
+.icon {
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    box-sizing: border-box;
+}
+
+.startMenuActive {
+    background-color: rgba(63, 63, 63, 0.9);
+    border-radius: 5px;
+}
+
+
+.icon.active {
+    border-bottom: 2px solid rgb(76, 194, 255);
+    background-color: rgba(63, 63, 63, 0.9);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.minimizedIcon {
+    border-bottom: 2px solid rgb(105, 105, 105);
+    background-color: rgba(63, 63, 63, 0);
+    border-radius: 0px;
+}
+
+.icon:hover {
+    /* cursor: pointer; */
+    background-color: rgba(63, 63, 63, 0.9);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+}
+
+.iconImg {
+    height: auto;
+    width: 27px;
+}
+
+.rightSide {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.ShowDesktop {
+    width: 2px;
+    height: 30px;
+}
+
+.ShowDesktop:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+}
+
+.TimeTab {
+    right: 10px;
+    padding: 7px;
+    margin: 0 5px;
+    right: 0;
+    color: #fff;
+    text-align: end;
+    font-size: small;
+}
+
+.TimeTab:hover {
+    cursor: pointer;
+    background-color: rgba(63, 63, 63, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+}
+
+.IconsTab {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.IconsTab:hover {
+    /* cursor: pointer; */
+    background-color: rgba(63, 63, 63, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+}
+
+.systemIcon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    padding: 7px;
+    margin: 0 5px;
+}
+
+.moreOptions {
+    justify-content: center;
+    width: 35px;
+}
